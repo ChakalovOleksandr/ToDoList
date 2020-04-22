@@ -3,15 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>ToDoList</title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+     body {
+             background-color: #638CB8 ;
+        }
+
+        .centre-column{
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 3px;
+            box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+        }
+        @media (max-width:1200px){
+               .centre-column{
+                     max-width: 970px;
+                }
+          }
+         @media (max-width:992px){
+                .centre-column{
+                    max-width: 750px;
+                 }
+          }
+         @media (max-width:767px){
+                .centre-column{
+                    max-width: none;
+                 }
+          }
+    </style>
 </head>
 <body>
-<h3>Update Task</h3>
+<div class="centre-column">
+    <h3>Update Task</h3>
 
-<form method="POST" action="">
+    <form method="POST" action="">
 
-    {% csrf_token  %}
-    {{form}}
-    <input type="submit" name="Update Task">
-</form>
+        {% csrf_token  %}
+        {{form}}
+
+        <input type="submit" name="Update Task">
+    </form>
+</div>
 </body>
 </html>
